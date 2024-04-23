@@ -1,0 +1,108 @@
+/*-----------------Шрифты--------------------------------------------------*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+/*--------Осн Информация-------------------------------------------------------*/
+body {
+    background: #C4C4C4;
+    font-family: 'Roboto';
+}
+
+.container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    width: 500px;
+    position: relative;
+}
+
+#searchInput {
+    width: 490px;
+    height: 60px;
+    font-size: 48px;
+    padding: 5px;
+}
+
+#autocompleteResults {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #E3E3E3;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#autocompleteResults li {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#autocompleteResults li:hover {
+    background-color: #65CDF9;
+}
+
+.repository-list {
+    margin-top: 250px;
+}
+
+#repositoryList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.repo-item {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 100px;
+    background-color: #E27BEB;
+    border: 1px solid #000000;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+}
+
+.repo-item button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.repo-item button::before,
+.repo-item button::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #ff0000;
+    top: calc(50% - 2px);
+}
+
+.repo-item button::before {
+    transform: rotate(-45deg);
+    left: 0;
+}
+
+.repo-item button::after {
+    transform: rotate(45deg);
+    right: 0;
+}
