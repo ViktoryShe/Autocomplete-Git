@@ -8,7 +8,7 @@ let debounceTimer;
 
 //Добавляем обработчик события ввода в поле поиска
 searchInput.addEventListener("input", function (event) {
-    const inputValue = event.target.value.trim();
+    const inputValue = event.target.value;
 
     if (!inputValue) {
         hideAutocomplete();
